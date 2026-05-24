@@ -1,0 +1,44 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="100%" stop-color="#120e1f"/>
+    </linearGradient>
+    <linearGradient id="reel" x1="0" y1="0" x2="64" y2="64">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="gem" x1="16" y1="16" x2="48" y2="48">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="gemGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+
+  <rect x="4" y="4" width="56" height="56" rx="12"
+    fill="none" stroke="url(#reel)" stroke-width="1.5" opacity="0.5"/>
+
+  <line x1="4" y1="22" x2="60" y2="22" stroke="#7c3aed" stroke-width="0.5" opacity="0.3"/>
+  <line x1="4" y1="42" x2="60" y2="42" stroke="#7c3aed" stroke-width="0.5" opacity="0.3"/>
+
+  <path d="M32 18L38 24V30H32H26V24L32 18Z" fill="url(#gem)" filter="url(#gemGlow)"/>
+
+  <rect x="48" y="24" width="1.5" height="16" rx="0.75" fill="#7c3aed" opacity="0.4"/>
+  <rect x="14" y="24" width="1.5" height="16" rx="0.75" fill="#7c3aed" opacity="0.4"/>
+</svg>
